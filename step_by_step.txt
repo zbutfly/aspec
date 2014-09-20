@@ -1,0 +1,38 @@
+STEP BY STEP MANUAL for DEVELOPMENT
+
+0. Toolkits:
+	Install Maven 3+ (http://maven.apache.org/download.cgi)
+	Install SilkSVN (https://www.sliksvn.com/en/download)
+	JDK (1.8 & 1.7 & 1.6)
+		Suggestion: install all version, use 1.8 as default and set compilance to 1.6 (Eclipse Preferences -> Java -> Compiler)
+	Set system environment JAVA_TOOL_OPTIONS to "-Duser.country=US -Duser.language=en" (Optional)
+	Set all bin path to system environment.
+	Set SVN proxy in %HOME%/.subversion/server
+1. Download and install Eclipse Luna for Java Developers. (154M for Mac/155M for Win)
+	Checkout development resources: svn co https://albacore.googlecode.com/svn/wiki/resources resources
+	Merge resources/eclipse-conf/eclipse.ini into ECLIPSE_ROOT/eclipse.ini
+	Merge resources/eclipse-conf/config.ini into ECLIPSE_ROOT/configuration/config.ini
+2. Install plugin.
+	Subclipse 1.6.X (Upate Site: http://subclipse.tigris.org/update_1.6.x)
+		Set subclipse lib: Eclipse Preference -> Team -> SVN: SVN interface: SVNKit.
+	Checkstyle (Eclipse Marketplace)
+	Findbug (Eclipse Marketplace)
+	Ansi Console (Optinal, Eclipse Marketplace)
+3. Import rules.
+	Eclipse Preferences -> Java -> Code Style ->Formatter: resources/eclipse-conf/code-formatter.xml
+	Checkstyle Rule. (Optinal... waiting for rules definition)
+	Findbug Rule. (Optinal... waiting for rules definition)
+4. Encoding:
+	Eclipse Preferences -> General -> Context Type: Text -> Default encoding: UTF-8
+	Eclipse Preferences -> General -> Workspace: Text file encoding: UTF-8
+5. Install local maven repository.
+	cd resources
+	mvn install:install-file -DpomFile=resources/parent-poms/root.pom -Dfile=resources/parent-poms/root.pom
+	mvn install:install-file -DpomFile=resources/parent-poms/albacore.pom -Dfile=resources/parent-poms/albacore.pom
+	svn co https://albacore.googlecode.com/svn/trunk/ albacore
+	cd albacore
+	mvn install
+	svn co https://albus.googlecode.com/svn/trunk/ albus
+	cd albus
+	mvn install
+Initialization completed.

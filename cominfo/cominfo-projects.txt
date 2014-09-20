@@ -1,0 +1,35 @@
+E:/workspace/bywork/cominfo_checkout/
+svn://115.236.170.146:53690/
+
+ETL单独服务正式版本：
+	svn://115.236.170.146:53690/Etl/BaseLib/EtlExec
+ETL单独服务测试版本：
+	svn://115.236.170.146:53690/Etl_ZSDS/BaseLib/EtlExec
+ETL的WEB管理：svn://115.236.170.146:53690/GongAn/etl
+	青青，东阳混合(JSP+JS)
+
+嘉兴完整项目：
+	svn://115.236.170.146:53690/GongAn/src_u1
+	GaRun：清清
+	BaseLib：业务逻辑
+		SearchService：搜索，徐
+		CollisionService：碰撞，徐
+		其他，东阳
+	Hadoop：东阳
+		Lgy:徐
+		其他：东阳
+	JXEtlUpdateReport：独立数据统计服务
+
+嘉兴项目演示项目：
+	svn://115.236.170.146:53690/GongAn/src_u1_test
+
+杭州项目生产环境：东阳
+	svn://115.236.170.146:53690/GongAn/src_hz_test
+
+
+杭州项目旧版本：
+	svn://115.236.170.146:53690/GongAn/src_hz
+
+
+聚合WEB管理：熊朝(JSP+JS)
+	svn://115.236.170.146:53690/GongAn/aggregate
